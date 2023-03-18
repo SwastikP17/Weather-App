@@ -1,8 +1,8 @@
 import React from 'react'
 import { Card, Feed } from 'semantic-ui-react';
 import moment from 'moment';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const WeatherCard = ({temperature,city,humidity,sunrise,sunset,icon}) => (
   <Card className='weather-card-main' style={{opacity:0.7}}>
