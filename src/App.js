@@ -1,11 +1,22 @@
 import axios from 'axios';
-import env from 'react-dotenv'
+// import env from 'react-dotenv'
 import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import WeatherCard from './components/Weathercard';
 import Forecast from './components/Forecast';
 import { Loader } from 'semantic-ui-react';
+import image1 from './images/01d.jpg';
+import image2 from './images/03d.jpg';
+import image3 from './images/10d.jpg';
+import image4 from './images/11d.jpg';
+import image5 from './images/50d.jpg';
+
+import image6 from './images/01n.jpg';
+import image7 from './images/03n.jpg';
+import image8 from './images/10n.jpg';
+import image9 from './images/11d.jpg';
+import image10 from './images/50n.jpg';
 
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather'
 const API_URL2 = 'https://api.openweathermap.org/data/2.5/onecall'
@@ -45,8 +56,44 @@ function App() {
       })
 
   }, [latitude, longitude]);
+  let imagefinal=''
+  switch (`${icon}`) {
+    case "01d":
+        imagefinal=image1
+      break;
+    case "03d":
+        imagefinal=image2
+      break;
+    case "10d":
+        imagefinal=image3
+      break;
+    case "11d":
+        imagefinal=image4
+      break;
+    case "50d":
+        imagefinal=image5
+      break;
+    case "01n":
+        imagefinal=image6
+      break;
+    case "03n":
+        imagefinal=image7
+      break;
+    case "10n":
+        imagefinal=image8
+      break;
+    case "11n":
+        imagefinal=image9
+      break;
+    case "50n":
+        imagefinal=image10
+      break;
+  
+    default: imagefinal=image1
+      break;
+  }
   return (
-    <div className='main'>
+    <div className='main' style={{backgroundImage:`url(${imagefinal})`}} >
       <Header />
       {loading ?(
         <div>

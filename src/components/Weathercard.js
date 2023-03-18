@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const WeatherCard = ({temperature,city,humidity,sunrise,sunset,icon}) => (
-  <Card className='weather-card-main'>
+  <Card className='weather-card-main' style={{opacity:0.7}}>
     <Card.Content className='weather-card'>
       <Card.Header className='weather-card-child'>{city}</Card.Header>
       <div className='icon-container'>

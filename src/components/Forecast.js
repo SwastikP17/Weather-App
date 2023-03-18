@@ -4,7 +4,7 @@ import moment from 'moment';
 
 export default function Forecast({ forecast }) {
     return (
-        <div style={{marginTop:20}}>
+        <div style={{marginTop:20,opacity:0.3}}>
             <Card.Group itemsPerRow={4} >
                 {forecast.map((data) => {
                     return (
